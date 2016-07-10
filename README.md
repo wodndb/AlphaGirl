@@ -9,9 +9,11 @@ Personal character bot (C# / CV: Yuzuki Yukari / Desktop)
 
 ## Goal of this project
 
-1. Notification time every half of hour. (=-= Working now =-=)
-2. Mealtime alarm.
-3. Weather information
+1. Notification time every half of hour. --> every hour (Finished)
+2. Morning / afternoon / evening Greeting (finished)
+3. Mealtime alarm.  (next to do)
+4. User setting alarm time
+5. Weather information
 
 ## Study list
 
