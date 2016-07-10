@@ -7,12 +7,13 @@ using System.Media;
 
 namespace AlphaGirlProto
 {
+    // Specific Event.
     class spEvent
     {
         public static void start()
         {
             SoundPlayer wp;
-            wp = new SoundPlayer("../../SoundLib/start.wav");
+            wp = new SoundPlayer(Properties.Resources.start);
             wp.PlaySync();
         }
     }

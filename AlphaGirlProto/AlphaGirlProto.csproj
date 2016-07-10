@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +85,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\0am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\0pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\1am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\1pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\2am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\2pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\3am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\3pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\4am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\4pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\5am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\5pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\6am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\6pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\7am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\7pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\8am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\8pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\9am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\9pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\10am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\10pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\11am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\11pm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soundLib\start.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

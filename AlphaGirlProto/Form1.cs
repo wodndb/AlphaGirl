@@ -16,6 +16,8 @@ namespace AlphaGirlProto
         public From()
         {
             InitializeComponent();
+
+            // Timer for updating current time and checking to notification.
             tUpdateTimer.Interval = 1000;
             tUpdateTimer.Start();
 
@@ -24,6 +26,7 @@ namespace AlphaGirlProto
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Show Current Directory
             //MessageBox.Show(System.Environment.CurrentDirectory);
         }
 
@@ -41,16 +44,20 @@ namespace AlphaGirlProto
 
         }
 
+        // tUpdateTimer : Timer for updating current time
         private void tUpdateTimer_Tick(object sender, EventArgs e)
         {
             DateTime nowDt = DateTime.Now;
             label2.Text = nowDt.ToString("HH:mm:ss");
+
+            // Check time notification
             if (int.Parse(nowDt.ToString("mm")) == 0 && int.Parse(nowDt.ToString("ss")) == 0)
             {
                 new Thread(() => timeNotiEvent.playSound(nowDt)).Start();
             }
         }
 
+        // Sound Test. This function play notification about current hour.
         private void SoundTest_Click(object sender, EventArgs e)
         {
             new Thread(() => timeNotiEvent.playSound(DateTime.Now)).Start();
