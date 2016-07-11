@@ -15,12 +15,13 @@ namespace AlphaGirlProto
             DateTime nowDT = DateTime.Now;
             SoundPlayer startWP = new SoundPlayer(Properties.Resources.start);
             SoundPlayer greetingWP = null;
+            int hour = nowDT.Hour;
 
-            if ( 6 <= int.Parse(nowDT.ToString("HH")) && int.Parse(nowDT.ToString("HH")) <= 11)
+            if ( 6 <= hour && hour <= 11)
             {
                 greetingWP = new SoundPlayer(Properties.Resources.morning);
             }
-            else if (12 <= int.Parse(nowDT.ToString("HH")) && int.Parse(nowDT.ToString("HH")) <= 17)
+            else if (12 <= hour && hour <= 17)
             {
                 greetingWP = new SoundPlayer(Properties.Resources.afternoon);
             }
