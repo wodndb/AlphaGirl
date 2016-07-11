@@ -14,90 +14,40 @@ namespace AlphaGirlProto
         // Sound notification.
         public static void playSound(DateTime dt)
         {
-            int h = int.Parse(dt.ToString("HH"));
+            int h = dt.Hour;
             SoundPlayer wp;
 
-            switch (h)
+            SoundPlayer[] wpArray = new SoundPlayer[]
             {
-                case 0:
-                    wp = new SoundPlayer(Properties.Resources._0am);
-                    break;
-                case 1:
-                    wp = new SoundPlayer(Properties.Resources._1am);
-                    break;
-                case 2:
-                    wp = new SoundPlayer(Properties.Resources._2am);
-                    break;
-                case 3:
-                    wp = new SoundPlayer(Properties.Resources._3am);
-                    break;
-                case 4:
-                    wp = new SoundPlayer(Properties.Resources._4am);
-                    break;
-                case 5:
-                    wp = new SoundPlayer(Properties.Resources._5am);
-                    break;
-                case 6:
-                    wp = new SoundPlayer(Properties.Resources._6am);
-                    break;
-                case 7:
-                    wp = new SoundPlayer(Properties.Resources._7am);
-                    break;
-                case 8:
-                    wp = new SoundPlayer(Properties.Resources._8am);
-                    break;
-                case 9:
-                    wp = new SoundPlayer(Properties.Resources._9am);
-                    break;
-                case 10:
-                    wp = new SoundPlayer(Properties.Resources._10am);
-                    break;
-                case 11:
-                    wp = new SoundPlayer(Properties.Resources._11am);
-                    break;
-                case 12:
-                    wp = new SoundPlayer(Properties.Resources._0pm);
-                    break;
-                case 13:
-                    wp = new SoundPlayer(Properties.Resources._1pm);
-                    break;
-                case 14:
-                    wp = new SoundPlayer(Properties.Resources._2pm);
-                    break;
-                case 15:
-                    wp = new SoundPlayer(Properties.Resources._3pm);
-                    break;
-                case 16:
-                    wp = new SoundPlayer(Properties.Resources._4pm);
-                    break;
-                case 17:
-                    wp = new SoundPlayer(Properties.Resources._5pm);
-                    break;
-                case 18:
-                    wp = new SoundPlayer(Properties.Resources._6pm);
-                    break;
-                case 19:
-                    wp = new SoundPlayer(Properties.Resources._7pm);
-                    break;
-                case 20:
-                    wp = new SoundPlayer(Properties.Resources._8pm);
-                    break;
-                case 21:
-                    wp = new SoundPlayer(Properties.Resources._9pm);
-                    break;
-                case 22:
-                    wp = new SoundPlayer(Properties.Resources._10pm);
-                    break;
-                case 23:
-                    wp = new SoundPlayer(Properties.Resources._11pm);
-                    break;
-                default:
-                    wp = null;
-                    break;
-            }
+                new SoundPlayer(Properties.Resources._0am),
+                new SoundPlayer(Properties.Resources._1am),
+                new SoundPlayer(Properties.Resources._2am),
+                new SoundPlayer(Properties.Resources._3am),
+                new SoundPlayer(Properties.Resources._4am),
+                new SoundPlayer(Properties.Resources._5am),
+                new SoundPlayer(Properties.Resources._6am),
+                new SoundPlayer(Properties.Resources._7am),
+                new SoundPlayer(Properties.Resources._8am),
+                new SoundPlayer(Properties.Resources._9am),
+                new SoundPlayer(Properties.Resources._10am),
+                new SoundPlayer(Properties.Resources._11am),
+                new SoundPlayer(Properties.Resources._0pm),
+                new SoundPlayer(Properties.Resources._1pm),
+                new SoundPlayer(Properties.Resources._2pm),
+                new SoundPlayer(Properties.Resources._3pm),
+                new SoundPlayer(Properties.Resources._4pm),
+                new SoundPlayer(Properties.Resources._5pm),
+                new SoundPlayer(Properties.Resources._6pm),
+                new SoundPlayer(Properties.Resources._7pm),
+                new SoundPlayer(Properties.Resources._8pm),
+                new SoundPlayer(Properties.Resources._9pm),
+                new SoundPlayer(Properties.Resources._10pm),
+                new SoundPlayer(Properties.Resources._11pm),
+            };
 
-            if (wp != null)
+            if (h >= 0 && h < wpArray.Length)
             {
+                wp = wpArray[h];
                 wp.PlaySync();
             }
         }
