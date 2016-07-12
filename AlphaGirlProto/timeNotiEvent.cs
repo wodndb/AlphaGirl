@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
-
+using System.IO;
 
 namespace AlphaGirlProto
 {
@@ -17,37 +17,37 @@ namespace AlphaGirlProto
             int h = dt.Hour;
             SoundPlayer wp;
 
-            SoundPlayer[] wpArray = new SoundPlayer[]
+            var rcArray = new UnmanagedMemoryStream[]
             {
-                new SoundPlayer(Properties.Resources._0am),
-                new SoundPlayer(Properties.Resources._1am),
-                new SoundPlayer(Properties.Resources._2am),
-                new SoundPlayer(Properties.Resources._3am),
-                new SoundPlayer(Properties.Resources._4am),
-                new SoundPlayer(Properties.Resources._5am),
-                new SoundPlayer(Properties.Resources._6am),
-                new SoundPlayer(Properties.Resources._7am),
-                new SoundPlayer(Properties.Resources._8am),
-                new SoundPlayer(Properties.Resources._9am),
-                new SoundPlayer(Properties.Resources._10am),
-                new SoundPlayer(Properties.Resources._11am),
-                new SoundPlayer(Properties.Resources._0pm),
-                new SoundPlayer(Properties.Resources._1pm),
-                new SoundPlayer(Properties.Resources._2pm),
-                new SoundPlayer(Properties.Resources._3pm),
-                new SoundPlayer(Properties.Resources._4pm),
-                new SoundPlayer(Properties.Resources._5pm),
-                new SoundPlayer(Properties.Resources._6pm),
-                new SoundPlayer(Properties.Resources._7pm),
-                new SoundPlayer(Properties.Resources._8pm),
-                new SoundPlayer(Properties.Resources._9pm),
-                new SoundPlayer(Properties.Resources._10pm),
-                new SoundPlayer(Properties.Resources._11pm),
+                Properties.Resources._0am,
+                Properties.Resources._1am,
+                Properties.Resources._2am,
+                Properties.Resources._3am,
+                Properties.Resources._4am,
+                Properties.Resources._5am,
+                Properties.Resources._6am,
+                Properties.Resources._7am,
+                Properties.Resources._8am,
+                Properties.Resources._9am,
+                Properties.Resources._10am,
+                Properties.Resources._11am,
+                Properties.Resources._0pm,
+                Properties.Resources._1pm,
+                Properties.Resources._2pm,
+                Properties.Resources._3pm,
+                Properties.Resources._4pm,
+                Properties.Resources._5pm,
+                Properties.Resources._6pm,
+                Properties.Resources._7pm,
+                Properties.Resources._8pm,
+                Properties.Resources._9pm,
+                Properties.Resources._10pm,
+                Properties.Resources._11pm,
             };
 
-            if (h >= 0 && h < wpArray.Length)
+            if (h >= 0 && h < rcArray.Length)
             {
-                wp = wpArray[h];
+                wp = new SoundPlayer(rcArray[h]);
                 wp.PlaySync();
             }
         }
