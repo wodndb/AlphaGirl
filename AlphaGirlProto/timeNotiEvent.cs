@@ -12,11 +12,13 @@ namespace AlphaGirlProto
     class timeNotiEvent
     {
         // Sound notification.
+        // \DateTime dt : time to notify.
         public static void playSound(DateTime dt)
         {
             int h = dt.Hour;
             SoundPlayer wp;
 
+            // Loading time notification sound to array.
             var rcArray = new UnmanagedMemoryStream[]
             {
                 Properties.Resources._0am,
@@ -45,6 +47,7 @@ namespace AlphaGirlProto
                 Properties.Resources._11pm,
             };
 
+            // Play sound over time.
             if (h >= 0 && h < rcArray.Length)
             {
                 wp = new SoundPlayer(rcArray[h]);
