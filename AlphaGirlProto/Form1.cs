@@ -55,6 +55,15 @@ namespace AlphaGirlProto
             {
                 new Thread(() => timeNotiEvent.playSound(nowDt)).Start();
             }
+
+            if(nowDt.Second % 4 != 0)
+            {
+                pictureBox1.BackgroundImage = Properties.Resources.普通_01;
+            }
+            else
+            {
+                pictureBox1.BackgroundImage = Properties.Resources.喜び_01;
+            }
         }
 
         // Sound Test. This function play notification about current hour.

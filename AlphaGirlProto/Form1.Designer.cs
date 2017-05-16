@@ -37,8 +37,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.SoundTest = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,10 +83,20 @@
             this.SoundTest.UseVisualStyleBackColor = true;
             this.SoundTest.Click += new System.EventHandler(this.SoundTest_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BackgroundImage = global::AlphaGirlProto.Properties.Resources.普通_01;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // From
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SoundTest);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -96,6 +108,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +123,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer tUpdateTimer;
         private System.Windows.Forms.Button SoundTest;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

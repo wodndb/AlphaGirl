@@ -55,6 +55,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="spEvent.cs" />
     <Compile Include="timeNotiEvent.cs" />
     <EmbeddedResource Include="Form1.nus-SS.resx">
@@ -65,14 +70,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,6 +169,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="soundLib\morning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="imageLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\汗.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喜び_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Σ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\うきうき.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ずーん.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\はてな.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\びっくり.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怒り.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怒り_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怒り_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怒り_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怒り_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\普通_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\悲しみ_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\悲しみ_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\悲しみ_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\音符.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
