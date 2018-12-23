@@ -48,7 +48,6 @@ namespace AlphaGirlProto
         private void tUpdateTimer_Tick(object sender, EventArgs e)
         {
             DateTime nowDt = DateTime.Now;
-            label2.Text = nowDt.ToString("HH:mm:ss");
 
             // Check time notification
             if (int.Parse(nowDt.ToString("mm")) == 0 && int.Parse(nowDt.ToString("ss")) == 0)
@@ -70,6 +69,12 @@ namespace AlphaGirlProto
         private void SoundTest_Click(object sender, EventArgs e)
         {
             new Thread(() => timeNotiEvent.playSound(DateTime.Now)).Start();
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Setting settingForm = new AlphaGirlProto.Setting();
+            settingForm.Show();
         }
     }
 }

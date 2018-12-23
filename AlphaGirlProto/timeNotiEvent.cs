@@ -15,12 +15,14 @@ namespace AlphaGirlProto
         // \DateTime dt : time to notify.
         public static void playSound(DateTime dt)
         {
-            int h = dt.Hour;
-            SoundPlayer wp;
-
-            // Loading time notification sound to array.
-            var rcArray = new UnmanagedMemoryStream[]
+            if (Properties.Settings.Default.timeNotiEventHour == true)
             {
+                int h = dt.Hour;
+                SoundPlayer wp;
+
+                // Loading time notification sound to array.
+                var rcArray = new UnmanagedMemoryStream[]
+                {
                 Properties.Resources._0am,
                 Properties.Resources._1am,
                 Properties.Resources._2am,
@@ -45,13 +47,14 @@ namespace AlphaGirlProto
                 Properties.Resources._9pm,
                 Properties.Resources._10pm,
                 Properties.Resources._11pm,
-            };
+                };
 
-            // Play sound over time.
-            if (h >= 0 && h < rcArray.Length)
-            {
-                wp = new SoundPlayer(rcArray[h]);
-                wp.PlaySync();
+                // Play sound over time.
+                if (h >= 0 && h < rcArray.Length)
+                {
+                    wp = new SoundPlayer(rcArray[h]);
+                    wp.PlaySync();
+                }
             }
         }
     }
