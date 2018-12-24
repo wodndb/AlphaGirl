@@ -13,6 +13,8 @@ namespace AlphaGirlProto
 {
     public partial class From : Form
     {
+        int googleCalNotiPrevTime = 0;  // Check if google calandar is already notified in period.
+
         public From()
         {
             InitializeComponent();
@@ -30,24 +32,11 @@ namespace AlphaGirlProto
             //MessageBox.Show(System.Environment.CurrentDirectory);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // tUpdateTimer : Timer for updating current time
         private void tUpdateTimer_Tick(object sender, EventArgs e)
         {
             DateTime nowDt = DateTime.Now;
+            int min = nowDt.Minute + (nowDt.Hour * 60);
 
             // Check time notification
             if (int.Parse(nowDt.ToString("mm")) == 0 && int.Parse(nowDt.ToString("ss")) == 0)
@@ -63,17 +52,20 @@ namespace AlphaGirlProto
             {
                 pictureBox1.BackgroundImage = Properties.Resources.喜び_01;
             }
-        }
 
-        // Sound Test. This function play notification about current hour.
-        private void SoundTest_Click(object sender, EventArgs e)
-        {
-            new Thread(() => timeNotiEvent.playSound(DateTime.Now)).Start();
+            // Google Calandar Noti
+            if ((Properties.Settings.Default.googleCalNoti == true) && (min != googleCalNotiPrevTime) &&
+                (min % Properties.Settings.Default.googleCalNotiPeriod == 0))
+            {
+                mFormGoogleCalList formGoogleCalList = new AlphaGirlProto.mFormGoogleCalList();
+                formGoogleCalList.Show();
+                googleCalNotiPrevTime = min;
+            }
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Setting settingForm = new AlphaGirlProto.Setting();
+            mFormSetting settingForm = new AlphaGirlProto.mFormSetting();
             settingForm.Show();
         }
     }

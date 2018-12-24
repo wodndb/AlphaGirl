@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.Windows.Forms;
 
 namespace AlphaGirlProto
 {
@@ -11,7 +12,7 @@ namespace AlphaGirlProto
     //
     // 1. Starting voice
     // 2. Greeting (morning / afternoon / evening)
-    // 3. Google Event Notification
+    // 3. Google Event Notification --> move to Form 1
     // 
     class spEvent
     {
@@ -48,6 +49,18 @@ namespace AlphaGirlProto
                     greetingWP.PlaySync();
                 }
                 System.Threading.Thread.Sleep(500);
+            }
+        }
+
+        public static void googleCalNoti()
+        {
+            DateTime nowDT = DateTime.Now;  // Now time
+            int min = ((nowDT.Minute + (nowDT.Hour * 60)) % Properties.Settings.Default.googleCalNotiPeriod);
+
+            if((Properties.Settings.Default.googleCalNoti == true) && (min == 0))
+            {
+                mFormGoogleCalList formGoogleCalList = new AlphaGirlProto.mFormGoogleCalList();
+                formGoogleCalList.Show();
             }
         }
     }

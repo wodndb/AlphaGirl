@@ -46,5 +46,29 @@ namespace AlphaGirlProto.Properties {
                 this["timeNotiEventHour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool googleCalNoti {
+            get {
+                return ((bool)(this["googleCalNoti"]));
+            }
+            set {
+                this["googleCalNoti"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int googleCalNotiPeriod {
+            get {
+                return ((int)(this["googleCalNotiPeriod"]));
+            }
+            set {
+                this["googleCalNotiPeriod"] = value;
+            }
+        }
     }
 }
